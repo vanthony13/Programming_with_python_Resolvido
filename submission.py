@@ -54,7 +54,7 @@ def euclidean_distance(loc1: Position, loc2: Position) -> float:
 ############################################################
 # Problem 4c
 
-def mutate_sentences(sentence: str) -> List[str]:
+def mutate_sentences(split_sentence,key):
     """
     Given a sentence (sequence of words), return a list of all "similar"
     sentences.
@@ -75,7 +75,33 @@ def mutate_sentences(sentence: str) -> List[str]:
                 (Reordered versions of this list are allowed.)
     """
     # BEGIN_YOUR_CODE (our solution is 17 lines of code, but don't worry if you deviate from this)
-    raise Exception("Not implemented yet")
+    
+    if len(split_sentence) >= sentence_length:
+        sentence_list.append(split_sentence)
+        return
+    elif key not in dicionario.keys():
+        return
+    else:
+        for value in dicionario[key]:
+            split = split_sentence
+            split.append(value)
+            mutate_sentences(split,value)
+    return
+
+
+##Testando a funcão mutate_sentences
+for key in dicionario.keys():
+    split_sentence = []
+    mutate_sentences(split_sentence, key)
+
+
+for elem in sentence_list:
+    sentence = " ".join(elem)
+    print (sentence + "\n")
+
+    
+    
+    
     # END_YOUR_CODE
 
 
@@ -109,6 +135,7 @@ def sparse_vector_dot_product(vec1,vec2):
 # Problem 4e
 
 def increment_sparse_vector(v1: SparseVector, scale: float, v2: SparseVector,) -> None:
+    
     """
     Given two sparse vectors |v1| and |v2|, perform v1 += scale * v2.
     If the scale is zero, you are allowed to modify v1 to include any
