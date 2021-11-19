@@ -92,7 +92,6 @@ def sparse_vector_dot_product(vec1,vec2):
     This function will be useful later for linear classifiers.
     Note: A sparse vector has most of its entries as 0.
     """
-
     global soma
     soma=0
     tamanhovec1 = len(vec1)
