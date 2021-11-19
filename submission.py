@@ -54,6 +54,12 @@ def euclidean_distance(loc1: Position, loc2: Position) -> float:
 ############################################################
 # Problem 4c
 
+
+
+dicionario = {'and': ['the'], 'the': ['cat', 'dog'], 'cat': ['and']}
+sentence_list = []
+sentence_length = 5
+
 def mutate_sentences(split_sentence,key):
     """
     Given a sentence (sequence of words), return a list of all "similar"
