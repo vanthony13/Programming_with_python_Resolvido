@@ -33,8 +33,7 @@ def find_alphabetically_first_word(text: str) -> str:
     """
 
     # BEGIN_YOUR_CODE (our solution is 1 line of code, but don't worry if you deviate from this)
-    return sorted(text.split())
-    #raise Exception("Not implemented yet")
+    return min(text.split());
     # END_YOUR_CODE
 
 
@@ -47,7 +46,8 @@ def euclidean_distance(loc1: Position, loc2: Position) -> float:
     are pairs of numbers (e.g., (3, 5)).
     """
     # BEGIN_YOUR_CODE (our solution is 1 line of code, but don't worry if you deviate from this)
-    raise Exception("Not implemented yet")
+    return math.sqrt((loc1[0] + loc2[0])**2 + (loc1[0] + loc2[0])**2);
+    #raise Exception("Not implemented yet")
     # END_YOUR_CODE
 
 
@@ -128,10 +128,6 @@ def find_nonsingleton_words(text: str) -> Set[str]:
     # BEGIN_YOUR_CODE (our solution is 4 lines of code, but don't worry if you deviate from this)
     raise Exception("Not implemented yet")
     # END_YOUR_CODE
-
-
-a = find_alphabetically_first_word("AAA WWW RRR UUU OOO BBB");
-print(a)
 
 
 
