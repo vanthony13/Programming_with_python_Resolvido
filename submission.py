@@ -109,8 +109,7 @@ def sparse_vector_dot_product(vec1,vec2):
 ############################################################
 # Problem 4e
 
-def increment_sparse_vector(v1: SparseVector, scale: float, v2: SparseVector,
-) -> None:
+def increment_sparse_vector(v1: SparseVector, scale: float, v2: SparseVector,) -> None:
     """
     Given two sparse vectors |v1| and |v2|, perform v1 += scale * v2.
     If the scale is zero, you are allowed to modify v1 to include any
@@ -121,7 +120,22 @@ def increment_sparse_vector(v1: SparseVector, scale: float, v2: SparseVector,
     This function will be useful later for linear classifiers.
     """
     # BEGIN_YOUR_CODE (our solution is 2 lines of code, but don't worry if you deviate from this)
-    raise Exception("Not implemented yet")
+
+    '''
+    Walter coding
+    
+    lista = []
+    if(len(v1) != len(v2)):
+        return None
+    if(scale==0):
+        scale=1
+    for a in range(0,len(v1)):
+        v1[0] = v1[a] + v2[a] * scale
+        lista.append(v1)
+    print(lista)
+    '''
+
+    #raise Exception("Not implemented yet")
     # END_YOUR_CODE
 
 
@@ -138,12 +152,7 @@ def find_nonsingleton_words(text: str) -> Set[str]:
     raise Exception("Not implemented yet")
     # END_YOUR_CODE
 
+#increment_sparse_vector([1,2,3],10,[2,2,2]);
 
-
-
-#Ola uma nova linha foi adicionada
-# Manera pessoal quem consegui faze um commint and push escreve se nome li:
-    # Walter Santos
-    # Kleiton Da Rosa
 
 
