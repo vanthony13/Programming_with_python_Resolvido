@@ -82,7 +82,7 @@ def mutate_sentences(sentence: str) -> List[str]:
 ############################################################
 # Problem 4d
 
-def sparse_vector_dot_product(v1: SparseVector, v2: SparseVector) -> float:
+def sparse_vector_dot_product(vec1,vec2):
     """
     Given two sparse vectors (vectors where most of the elements are zeros)
     |v1| and |v2|, each represented as collections.defaultdict(float), return
@@ -92,9 +92,18 @@ def sparse_vector_dot_product(v1: SparseVector, v2: SparseVector) -> float:
     This function will be useful later for linear classifiers.
     Note: A sparse vector has most of its entries as 0.
     """
-    # BEGIN_YOUR_CODE (our solution is 1 line of code, but don't worry if you deviate from this)
-    raise Exception("Not implemented yet")
-    # END_YOUR_CODE
+
+    global soma
+    soma=0
+    tamanhovec1 = len(vec1)
+    tamanhovec2 = len(vec2)
+
+    if(tamanhovec1==tamanhovec1):
+       for i in range(0,tamanhovec1):
+            produtoEscalar = vec1[i] * vec2[i]
+            soma = soma + produtoEscalar
+    return soma
+
 
 
 ############################################################
